@@ -10,7 +10,7 @@ plugins {
     id("idea")
     id("org.springframework.boot") version "3.2.2"
     id("io.spring.dependency-management") version "1.1.4"
-    id("com.google.cloud.tools.jib") version "3.4.0"
+    id("com.google.cloud.tools.jib") version "3.4.1"
     id("net.nemerosa.versioning") version "2.8.2"
 
     kotlin("jvm") version "1.9.22"
