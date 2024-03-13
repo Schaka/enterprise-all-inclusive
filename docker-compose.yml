@@ -1,0 +1,19 @@
+services:
+  postgresql:
+    image: postgres:16-alpine
+    container_name: postgresql-eai
+    read_only: true
+
+    environment:
+      POSTGRES_DB: eai
+      POSTGRES_USER: eai
+      POSTGRES_PASSWORD: eai
+
+    ports:
+      - 5432:5432
+
+    tmpfs:
+      - /run
+
+    volumes:
+      - /tmp/eai-postgres:/var/lib/postgresql/data

@@ -1,0 +1,16 @@
+server:
+  port: 8090
+
+tenant:
+  name: enterprise-all-inclusive
+
+spring:
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eai
+    username: eai
+    password: eai
+
+  threads:
+    virtual:
+      enabled: true
