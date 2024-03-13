@@ -4,6 +4,7 @@ import jakarta.validation.Valid
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
+import org.springframework.data.domain.Sort.Direction.DESC
 import org.springframework.data.web.PageableDefault
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
@@ -20,7 +21,7 @@ class TransactionController(
     fun listTransactions(
         @PathVariable("customer") customerId: Long,
         @PathVariable("account") accountId: Long,
-        @PageableDefault(page = 0, size = 50, sort = ["modified", "created"]) pageable: Pageable
+        @PageableDefault(page = 0, size = 50, sort = ["modified", "created"], direction = DESC) pageable: Pageable
     ): Page<RestTransaction> {
         return transactionService.transactionHistory(customerId, accountId, pageable)
             .map(this::convert)

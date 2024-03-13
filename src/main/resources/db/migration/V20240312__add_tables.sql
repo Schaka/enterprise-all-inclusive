@@ -17,6 +17,6 @@ CREATE TABLE transactions(
      created        TIMESTAMP,
      modified       TIMESTAMP,
      status         VARCHAR(10),
-     type         VARCHAR(10)
+     type           VARCHAR(10)
 );
 
