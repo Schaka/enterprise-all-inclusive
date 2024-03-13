@@ -141,7 +141,7 @@ where status is either `ACCEPTED` or `REJECTED` depending on the available funds
 
 
 #### Transaction rollback
-Remembering the ID turned by the previous endpoint, we can roll back a transaction at any point. This endpoint takes **no* request body.
+Remembering the ID turned by the previous endpoint, we can roll back a transaction at any point. This endpoint takes **no** request body.
 If a rollback is successful, the status of the transaction is now `VOID` and cannot be changed anymore.
 The account balance will be reverted to its previous state.
 
